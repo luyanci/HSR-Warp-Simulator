@@ -20,6 +20,9 @@
 		playSfx();
 		navigate('allbanner');
 	};
+	const closeWindow=()=>{
+		window.close()
+	}
 </script>
 
 <Header icon="warp" h1={$t('warp.heading')} h2={$t(`banner.${bannerName}`)} hideDesktopIcon>
@@ -31,7 +34,10 @@
 			{unlimitedWarp ? '∞' : $stellarJade}
 		</MyFund>
 	</div>
-	<div class="close">
+	<div class="changeBanners">
 		<ButtonIcon on:click={openAllBanners} />
+	</div>
+	<div class="close">
+		<ButtonIcon on:click={closeWindow}/>
 	</div>
 </Header>
